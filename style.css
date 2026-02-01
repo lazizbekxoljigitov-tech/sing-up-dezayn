@@ -256,3 +256,12 @@ textlar uchun bazi bir joyda white
   
 }
 
+.animate__fadeInLeft{
+  animation-delay: 0.5s;
+}
+.animate__fadeInDown{
+  animation-delay: 1s;
+}
+.animate__fadeInRight{
+  animation-delay: 1.5s;
+}
