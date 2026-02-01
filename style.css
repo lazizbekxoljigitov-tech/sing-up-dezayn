@@ -38,6 +38,8 @@ body::-webkit-scrollbar {
 
 .navbar {
   justify-content: space-between;
+  position: relative;
+  z-index: 9;
 }
 .navbar__main {
   display: flex;
@@ -172,15 +174,20 @@ textlar uchun bazi bir joyda white
   width: 100%;
 }
 
-.navbar__bars{
+.navbar__bars {
   display: none;
 }
 
-.navbar__bars > i{
+.header__img {
+  position: relative;
+  z-index: -66;
+}
+
+.navbar__bars > i {
   display: none;
 }
 
-#icons{
+#icons {
   display: none;
 }
 
@@ -233,7 +240,7 @@ textlar uchun bazi bir joyda white
     font-size: 15px;
   }
 
-  .navbar__bars{
+  .navbar__bars {
     display: flex;
     justify-content: start;
     color: #000000;
@@ -242,26 +249,161 @@ textlar uchun bazi bir joyda white
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    
   }
-  .navbar__bars--menu{
+  .navbar__bars--menu {
     display: none;
-
   }
 
-  .navbar{
+  .navbar {
     display: flex;
     align-items: center;
   }
-  
 }
 
-.animate__fadeInLeft{
+.animate__fadeInLeft {
   animation-delay: 0.5s;
 }
-.animate__fadeInDown{
+.animate__fadeInDown {
   animation-delay: 1s;
 }
-.animate__fadeInRight{
+.animate__fadeInRight {
   animation-delay: 1.5s;
+}
+
+.animate__fadeIn {
+  animation-delay: 2s;
+}
+
+.hero__marquee {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.hero__track {
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  animation: marquee 15s linear infinite;
+  will-change: transform;
+}
+
+.hero__title--logo {
+  font-family: "SN Pro", sans-serif;
+  font-size: 24px;
+  color: #00000076;
+  padding: 9px 16px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.hero__title--logo:hover {
+  font-family: Rubik, sans-serif;
+  background-color: #d8c0ff7d;
+  color: #ffffff;
+  border-radius: 90px;
+  transform: scale(1.1);
+}
+
+/* marquee animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* hover bo‘lsa to‘xtasin (UX PRO) */
+.hero__marquee:hover .hero__track {
+  animation-play-state: paused;
+}
+
+/* accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero__track {
+    animation: none;
+  }
+}
+
+.main__cards {
+  margin-top: 100px;
+}
+
+.anime__catrds--title {
+  font-family: Rubik;
+  color: #0000005e;
+}
+
+/* marquee wrapper */
+.cards__marquee {
+  margin-top: 50px;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* moving track */
+.cards__track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: cards-marquee 20s linear infinite;
+  will-change: transform;
+}
+
+/* card */
+.anime__search {
+  background-color: #0000002d;
+  width: 20rem;
+  height: 450px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.anime__search:hover {
+  transform: scale(1.03);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+}
+
+/* image */
+.anime__seearch--img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+/* text */
+.anime__seach--title {
+  margin-top: 10px;
+  font-family: "SN Pro", sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* animation */
+@keyframes cards-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* hover bo‘lsa to‘xtasin (UX 🔥) */
+.cards__marquee:hover .cards__track {
+  animation-play-state: paused;
+}
+
+/* accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .cards__track {
+    animation: none;
+  }
 }
