@@ -185,6 +185,7 @@ textlar uchun bazi bir joyda white
 .header__img {
   position: relative;
   z-index: -66;
+  overflow: hidden;
 }
 
 .navbar__bars > i {
@@ -716,4 +717,202 @@ textlar uchun bazi bir joyda white
   background: linear-gradient(135deg, #fffb87, #5ac8fa, #1ca9c9);
   transform: scale(1.08) rotate(-1deg);
   box-shadow: 0 0 35px rgba(255,255,255,0.7);
+}
+
+
+@media (max-width: 994px) {
+  .header__title--name {
+    font-size: 36px;
+  }
+  .header__subtitle {
+    font-size: 18px;
+  }
+  .header__img {
+    width: 18em;
+  }
+  .header__main {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+  }
+  .navbar__links {
+    gap: 20px;
+  }
+  .hero__title--logo {
+    font-size: 20px;
+    padding: 7px 12px;
+  }
+  .anime__search {
+    width: 18rem;
+    height: 400px;
+  }
+}
+
+/* ---------- Small Tablets / Large Phones ---------- */
+@media (max-width: 650px) {
+  /* Navbar adjustments */
+  .navbar__links {
+    display: none;
+  }
+  .navbar__bars {
+    display: flex;
+    color: #000;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    align-items: center;
+    gap: 10px;
+  }
+  .navbar {
+    justify-content: center;
+    padding: 15px 15px;
+  }
+
+  /* Header adjustments */
+  .header__main {
+    margin-top: 200px;
+  }
+  .header__main--titleeee {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__title {
+    text-align: center;
+    gap: 15px;
+  }
+  .header__title--name {
+    font-size: 28px;
+  }
+  .header__subtitle {
+    font-size: 16px;
+  }
+  .header__img {
+    width: 15em;
+    margin-top: 20px;
+  }
+
+  /* Hero marquee adjustments */
+  .hero__track {
+    gap: 25px;
+  }
+
+  /* Cards adjustments */
+  .anime__search {
+    width: 16rem;
+    height: 350px;
+  }
+}
+
+/* ---------- Mobile / Small Screens ---------- */
+@media (max-width: 480px) {
+  /* Header */
+  .header__title--name {
+    font-size: 24px;
+  }
+  .header__subtitle {
+    font-size: 14px;
+  }
+  .header__img {
+    width: 12em;
+  }
+  .header__main {
+    margin-top: 220px;
+    padding: 0 10px;
+  }
+
+  /* Hero marquee */
+  .hero__track {
+    gap: 15px;
+  }
+  .hero__title--logo {
+    font-size: 16px;
+    padding: 5px 8px;
+  }
+
+  /* Cards */
+  .anime__search {
+    width: 14rem;
+    height: 300px;
+  }
+
+  /* Subscribe section */
+  .subscribe {
+    width: 90%;
+    margin: 50px auto;
+    height: auto;
+    padding: 20px;
+  }
+  .subscribe__name {
+    font-size: 24px;
+  }
+  .subscribe__btn, .input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer__main {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  .footer__title h2 {
+    font-size: 28px;
+  }
+  .footer__boglansh p,
+  .fopter__links p {
+    font-size: 14px;
+  }
+  .footer__input {
+    flex-direction: column;
+  }
+  .footer__input input,
+  .footer__input button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* ---------- Extra Small Phones ---------- */
+@media (max-width: 360px) {
+  .header__title--name {
+    font-size: 20px;
+  }
+  .header__subtitle {
+    font-size: 12px;
+  }
+  .header__img {
+    width: 10em;
+  }
+  .subscribe__name {
+    font-size: 20px;
+  }
+  .subscribe__btn,
+  .input {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .footer__title h2 {
+    font-size: 24px;
+  }
+  .footer__boglansh p,
+  .fopter__links p {
+    font-size: 12px;
+  }
+}
+
+/* ---------- Universal Flex Adjustments for all devices ---------- */
+@media (max-width: 994px) {
+  .header__main--titleeee,
+  .footer__main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero__marquee {
+    overflow-x: scroll;
+  }
+  .cards__marquee {
+    overflow-x: scroll;
+  }
 }
